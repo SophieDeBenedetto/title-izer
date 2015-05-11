@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
- devise_for :users
- 
+ devise_for :users, :controllers => { registrations: 'registrations' }
   
   authenticated :user do
     root 'users#index'
+    get 'games' => 'users#games'
   end
  
   unauthenticated :user do
@@ -12,6 +12,7 @@ Rails.application.routes.draw do
     end
   end
  
+  post 'playing' => 'conversations#new'
   resources :conversations do
     resources :messages
   end
