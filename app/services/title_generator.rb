@@ -27,8 +27,8 @@ class TitleGenerator
 
   PRONOUNS = ["A", "The", "His", "Her", "Their", "Some", "A Few"]
 
-  def generate_title
-    PRONOUNS.sample.capitalize + ADJECTIVES.sample.capitalize + NOUNS.sample.capitalize
+  def self.generate_title
+    "#{PRONOUNS.sample.capitalize} #{ADJECTIVES.sample.capitalize} #{NOUNS.sample.capitalize}"
   end
 
 end
