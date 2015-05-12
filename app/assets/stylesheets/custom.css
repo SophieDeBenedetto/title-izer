@@ -24,3 +24,13 @@ body {
   margin-top: 50px;
   font-family: "Raleway", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+.conversation {
+  margin-left: 150px;
+  width: 75%;
+}
+
+.btn-submit {
+  margin-left: 88%;
+  width: 10%;
+}
