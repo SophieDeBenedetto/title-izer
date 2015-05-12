@@ -5,4 +5,12 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :conversations, foreign_key: :sender_id
+
+  after_create :add_avatar
+
+  def add_avatar
+    self.avatar = Faker::Avatar.image("my-own-slug", "100x100", "jpg")
+    self.save
+  end
+  
 end
