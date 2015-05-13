@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- devise_for :users, :controllers => { registrations: 'registrations', sessions: "users/sessions" }
+ devise_for :users, :controllers => { registrations: 'registrations', sessions: "users/sessions",  :omniauth_callbacks => "omniauth_callbacks" }
  # devise_for :users, controllers: { sessions: "users/sessions" }
   
   authenticated :user do

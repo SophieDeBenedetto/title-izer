@@ -28,8 +28,10 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
-        <%unless current_user.nil?%>
+        <%if !current_user.nil?%>
         <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "active" %></li>
+        <%else%>
+        <li><%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %></li>
         <%end%>
       </ul>
     </div>

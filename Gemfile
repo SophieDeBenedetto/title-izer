@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
-
+gem 'figaro'
+gem 'omniauth'
+gem "omniauth-google-oauth2"
 #use devise for user auth
 gem 'devise'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

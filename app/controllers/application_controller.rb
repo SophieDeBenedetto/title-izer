@@ -5,6 +5,7 @@ class ApplicationController < ActionController::Base
 
 
   before_action :update_last_seen
+  
   #show who is active, logged on, logged off
   #show appropriate avatar
   #dual log in
