@@ -1,6 +1,6 @@
 <li class="<%=  self_or_other(message) %>">
   <div class="avatar">
-    <img src="<%=current_user.avatar%>" />
+    <img src="<%=message_interlocutor(message).avatar%>" />
   </div>
   <div class="chatboxmessagecontent">
     <p><%= message.body %></p>
@@ -9,3 +9,4 @@
     </time>
   </div>
 </li>
+
