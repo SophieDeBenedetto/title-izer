@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   end
 
   def games
+    binding.pry
     @users = User.all
     @conversation = Conversation.new
   end
