@@ -1,12 +1,12 @@
-<div class="col col-md-4">
+<div class="col col-md-4 col-md-offset-4">
 
-<table class="table table-striped table-hover ">
+<table class="table table-info games-table">
   <tbody>
     <% @users.each do |user| %>
     <tr>
       <td><%= availability(user)%></td>
       <td><%= user.name %></td>
-      <td>
+      <td class="start-btn-table">
         <%= button_to "Start Game", conversations_path(:recipient_id => user.id, :sender_id => current_user.id), class: "btn btn-success btn-xs start-conversation"%>
       </td>
     </tr>

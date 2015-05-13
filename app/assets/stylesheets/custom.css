@@ -67,7 +67,16 @@ body {
     background-color: red; 
 }
 
+.start-btn-table {
+  width: 10%;
+}
 
+.games-table {
+  border-radius: 5px;
+  background-color: white;
+  border-bottom: 1px;
+  margin-top: 40px; 
+}
 
 
 
