@@ -1,5 +1,8 @@
 class MessagesController < ApplicationController
 
+
+  def index
+  end
   def create
     @conversation = Conversation.find(params[:conversation_id])
     if message_params[:body].empty?

@@ -1,0 +1,8 @@
+<%if @update %>
+  <%@convos.each do |convo|%>
+      var id = <%=convo.sender_id%>
+      $('#new-messages-'+ id).html("<div class='blink'></div>");
+      $("#new-messages-name-"+id).addClass("bold-name")
+
+  <%end%>
+<%end%>

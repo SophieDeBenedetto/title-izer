@@ -4,8 +4,8 @@
     var chatbox = $(".chatboxcontent")
     var sender_id = "<%= @message.user.id %>";
     var reciever_id = $('meta[name=user-id]').attr("content");
-// debugger;
- 
+    $("#new-messages").html("ALERT!!!");
+
     chatbox.append("<%= j render( partial: @message ) %>");
     chatbox.scrollTop(chatbox[0].scrollHeight);
     $(".chatboxtextarea").val("");

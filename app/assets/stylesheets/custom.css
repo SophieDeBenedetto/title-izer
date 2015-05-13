@@ -67,6 +67,33 @@ body {
     background-color: red; 
 }
 
+.blink {
+  width: 13px;
+  height: 13px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  /*background-color: orange; */
+  animation: blink 1s steps(5, start) infinite;
+  -webkit-animation: blink 1s steps(5, start) infinite;
+
+
+}
+
+
+
+@keyframes blink {
+  to {
+    background-color: orange;
+  }
+}
+@-webkit-keyframes blink {
+  to {
+    background-color: red;
+  }
+}
+
+
 .start-btn-table {
   width: 10%;
 }
@@ -76,6 +103,10 @@ body {
   background-color: white;
   border-bottom: 1px;
   margin-top: 40px; 
+}
+
+.bold-name {
+  font-weight: bold;
 }
 
 
