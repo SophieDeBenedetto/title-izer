@@ -6,4 +6,6 @@ class UsersController < ApplicationController
     @users = User.all
     @conversation = Conversation.new
   end
+
+  
 end

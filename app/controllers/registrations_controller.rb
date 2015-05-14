@@ -2,6 +2,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   after_action :update_online_status, only: [:create]
 
+  
   private
 
   def sign_up_params
