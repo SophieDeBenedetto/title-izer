@@ -1,24 +1,10 @@
 class ConversationsController < ApplicationController
-
   before_filter :authenticate_user!
- 
+
   # layout false
 
   def index
-    @update = false
-    @convos = []
-    @users = User.all 
-    @users.each do |user|
-      @convos << Conversation.between(current_user, user).first  
-    end
-    @convos.compact!
-    @convos.each do |convo|
-      @update = true if convo.messages.last.created_at > Time.now - 10.seconds
-    end
-
-
-    #check all convos that exist between current user and other users. 
-    #if any have messages created in the last 10 seconds, replace little cirle with alert icon
+    @decorated_conversation = ConversationDecorator.new(current_user)
   end
 
   def create
@@ -49,5 +35,5 @@ class ConversationsController < ApplicationController
     def interlocutor(conversation)
       current_user == conversation.recipient ? conversation.sender : conversation.recipient
     end
-  
+
 end

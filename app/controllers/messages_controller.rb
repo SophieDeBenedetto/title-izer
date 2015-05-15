@@ -1,8 +1,7 @@
 class MessagesController < ApplicationController
-
-
   def index
   end
+
   def create
     @conversation = Conversation.find(params[:conversation_id])
     if message_params[:body].empty?
@@ -10,7 +9,7 @@ class MessagesController < ApplicationController
     else
       @message = @conversation.messages.build(message_params)
     end
-    
+
     @message.user_id = current_user.id
     @message.save!
     @path = conversation_path(@conversation)
@@ -18,8 +17,7 @@ class MessagesController < ApplicationController
 
   private
 
-    def message_params
-      params.require(:message).permit(:body)
-    end
-
+  def message_params
+    params.require(:message).permit(:body)
+  end
 end
