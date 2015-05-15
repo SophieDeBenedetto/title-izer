@@ -3,10 +3,8 @@ class RegistrationsController < Devise::RegistrationsController
   after_action :update_online_status, only: [:create]
 
   def update
-    binding.pry
     user = User.find(current_user.id)
     user.update(thinned_params)
-    binding.pry
     redirect_to root_path
 
   end

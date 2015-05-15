@@ -29,6 +29,7 @@
       
       <ul class="nav navbar-nav navbar-right">
         <%if !current_user.nil?%>
+        <li><%=link_to "My Account", edit_user_registration_path%></li>
         <li><%= link_to "Sign out", destroy_user_session_path, :method => :delete, class: "active" %></li>
         <%else%>
         <li><%= link_to "Sign in with Google", user_omniauth_authorize_path(:google_oauth2) %></li>
