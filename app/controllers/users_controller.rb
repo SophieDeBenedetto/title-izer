@@ -15,7 +15,6 @@ class UsersController < ApplicationController
   end
 
   def avatarize
-    binding.pry
     @user = current_user
     if current_user.sign_in_count == 1 && current_user.avatar.nil?
       render "avatar"
