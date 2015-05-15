@@ -8,12 +8,12 @@ class User < ActiveRecord::Base
 
   has_many :conversations, foreign_key: :sender_id
 
-  after_create :add_avatar
+  # after_create :add_avatar
 
-  def add_avatar
-    self.avatar = Faker::Avatar.image("my-own-slug", "100x100", "jpg")
-    self.save
-  end
+  # def add_avatar
+  #   self.avatar = Faker::Avatar.image("my-own-slug", "100x100", "jpg")
+  #   self.save
+  # end
 
   def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
     data = access_token.info

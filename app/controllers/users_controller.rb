@@ -16,7 +16,7 @@ class UsersController < ApplicationController
 
   def avatarize
     @user = current_user
-    if current_user.sign_in_count == 1 && (current_user.avatar == "http://avatarmaker.net/free-avatars/avatars/various_227/yellow_duck_avatar_100x100_48557.jpg" || current_user.avatar == "http://robohash.org/my-own-slug.jpg?size=100x100")
+    if current_user.sign_in_count == 1 && current_user.avatar.nil?
       render "avatar"
     end
   end
