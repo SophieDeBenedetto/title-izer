@@ -19,6 +19,6 @@ class Conversation < ActiveRecord::Base
   end
 
   def new_messages?
-    last_message.created_at > Time.now - 10
+    last_message.created_at.to_time > Time.now.to_date - 10
   end
 end

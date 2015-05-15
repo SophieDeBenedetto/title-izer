@@ -1,4 +1,3 @@
-<% binding.pry %>
 <% if @decorated_conversation.updated? %>
   <% @decorated_conversation.convos.each do |convo| %>
       var id = <%= convo.sender_id %>
